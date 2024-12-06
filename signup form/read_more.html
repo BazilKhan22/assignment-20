@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Read More</title>
+</head>
+<body>
+    <h2>Item Details</h2>
+    <div id="content">
+        <p id="shortText">This is a short summary of the item.</p>
+        <p id="fullText" style="display: none;">This is the full detail of the item. It contains more information about the item and its features.</p>
+        <button onclick="toggleDetails()">Read More</button>
+    </div>
+
+    <nav>
+        <a href="signup.html">Go to signup</a> | 
+        <a href="student_table.html">Go to Student Table</a>
+    </nav>
+
+    <script>
+        function toggleDetails() {
+            var fullText = document.getElementById("fullText");
+            var button = document.querySelector("button");
+            if (fullText.style.display === "none") {
+                fullText.style.display = "block";
+                button.innerText = "Read Less";
+            } else {
+                fullText.style.display = "none";
+                button.innerText = "Read More";
+            }
+        }
+    </script>
+</body>
+</html>
